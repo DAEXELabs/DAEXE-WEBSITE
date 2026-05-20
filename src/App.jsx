@@ -15,18 +15,21 @@ const projects = [
     desc: "AI-powered coaching and support systems for call centers and field teams.",
     tag: "Agent Platform",
     icon: Users,
+    link: "#",
   },
   {
     name: "LangstonOps",
     desc: "Operational tools built for field execution, visibility, and accountability.",
     tag: "Ops System",
     icon: BarChart3,
+    link: "https://langstonops.daexelabs.com",
   },
   {
     name: "SheldonBot",
     desc: "An intelligent assistant experiment designed for practical utility and real-world impact.",
     tag: "Assistant",
     icon: Bot,
+    link: "#",
   },
 ];
 
@@ -216,14 +219,18 @@ export default function App() {
               const Icon = project.icon;
 
               return (
-                <article
+                <a
                   key={project.name}
-                  className="group rounded-2xl border border-cyan-400/15 bg-black/35 p-6 transition hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-cyan-400/[0.06]"
+                  href={project.link}
+                  target={project.link === "#" ? "_self" : "_blank"}
+                  rel={project.link === "#" ? undefined : "noopener noreferrer"}
+                  className="group block rounded-2xl border border-cyan-400/15 bg-black/35 p-6 transition hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-cyan-400/[0.06]"
                 >
                   <div className="mb-5 flex items-start justify-between gap-4">
                     <div className="rounded-2xl border border-cyan-400/35 bg-cyan-400/10 p-4">
                       <Icon className="text-cyan-400" size={30} />
                     </div>
+
                     <ArrowRight
                       className="-rotate-45 text-cyan-400 transition group-hover:translate-x-1 group-hover:-translate-y-1"
                       size={22}
@@ -231,13 +238,15 @@ export default function App() {
                   </div>
 
                   <h3 className="text-2xl font-black">{project.name}</h3>
+
                   <p className="mt-2 text-sm font-bold uppercase tracking-[0.15em] text-cyan-400">
                     {project.tag}
                   </p>
+
                   <p className="mt-5 leading-7 text-slate-300">
                     {project.desc}
                   </p>
-                </article>
+                </a>
               );
             })}
           </div>
