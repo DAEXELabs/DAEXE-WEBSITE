@@ -12,7 +12,7 @@ import {
 const projects = [
   {
     name: "Unity Well",
-    desc: "A GPT app trained daily for call centers and field teams, built to support coaching, communication, troubleshooting, and field execution.",
+    desc: "A GPT app trained daily for call centers and field teams, built to support coaching, communication, troubleshooting, and field execution. Specialized in Water Treatment.",
     tag: "GPT APP",
     icon: Users,
     link: "https://chatgpt.com/g/g-691233e6f3a88191a05661ecc2dbabbb-unity-well",
