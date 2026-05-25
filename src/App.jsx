@@ -15,7 +15,7 @@ const projects = [
     desc: "A GPT app trained daily for call centers and field teams, built to support coaching, communication, troubleshooting, and field execution.",
     tag: "GPT APP",
     icon: Users,
-    link: "#https://chatgpt.com/g/g-691233e6f3a88191a05661ecc2dbabbb-unity-well",
+    link: "https://chatgpt.com/g/g-691233e6f3a88191a05661ecc2dbabbb-unity-well",
   },
   {
     name: "LangstonOps",
